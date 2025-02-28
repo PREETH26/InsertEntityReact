@@ -4,6 +4,7 @@ import React from "react";
 import BookCard from "./components/BookCard";
 import books from "./booksData";
 import "./Home.css"; // Import the CSS for styling
+import {Link} from 'react-router-dom'
 
 const Home = () => {
   return (
@@ -13,7 +14,9 @@ const Home = () => {
         {books.map((book) => (
           <BookCard key={book.id} book={book} />
         ))}
+        
       </div>
+      <Link to="/Add-book">Add Book</Link>
     </div>
   );
 };
